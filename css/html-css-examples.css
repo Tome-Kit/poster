@@ -1,0 +1,546 @@
+@CHARSET "UTF-8";
+
+@import url("../../css/normalize.css");
+
+@counter-style menu {
+	system: cyclic;
+	symbols: "\1F3BE";
+	suffix: " ";
+}
+
+@font-face {
+	font-family: "Alte Haas Grotesk";
+	src: url("../../ttf/AlteHaasGroteskRegular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Alte Haas Grotesk Bold";
+	src: url("../../ttf/AlteHaasGroteskBold.ttf") format("truetype");
+}
+/* Common */
+html {
+	font-family: "Alte Haas Grotesk";
+	font-size: 16px;
+}
+
+a {
+	color: hsl(155, 100%, 55%);
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px hsla(0, 0%, 0%, 1);
+	text-shadow: .063rem .063rem 0 hsla(0, 0%, 0%, 1);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #73d216;
+}
+
+address {
+	color: hsla(0, 0%, 100%, 1);
+	font-family: "Alte Haas Grotesk";
+	font-size: 12pt;
+	font-style: normal;
+}
+
+article {
+	background: hsla(0, 100%, 100%, 1);
+	border: 8px solid #DC1E35;
+	border: .5rem solid #DC1E35;
+	padding: 8px;
+	padding: .5rem;
+	width: 1302px;
+	width: 81.375rem;
+	height: 558px;
+	height: 34.875rem;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	display: none;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+article h2 {
+	color: #DC1E35;
+}
+
+
+
+
+
+
+
+#containerForAllTest{
+	border: 0.063rem solid black;
+	perspective: 20rem;
+	width: 10.313rem;
+	height: 10.313rem;
+	bottom: 0;
+}
+#contentForTest{
+	width: 10.313rem;
+	height: 10.313rem;
+	background: orange;
+	transition: transform 1s;
+	z-index: 1000;
+	position: relative;
+}
+#contentForTest:hover{
+	transform: scale(4) translate(100px);
+	
+}
+#containerForTest{
+	background: blue;
+	position: absolute;
+	bottom: 0;
+	transform-origin: left center;
+	width: 10.313rem;
+	height: 10.313rem;
+	transition: transform 6s;
+	transform-style: preserve-3d;
+}
+#containerForAllTest:hover #containerForTest {
+	transform: rotateY(-180deg);
+}
+
+#test {
+	background: pink;
+	backface-visibility: hidden;
+	
+}
+#test_1{
+		transform: rotateY(180deg);
+	background: lightblue;
+	backface-visibility: hidden;
+}
+
+#containerForAllTest1{
+	border: 0.063rem solid black;
+	perspective: 20rem;
+	width: 10.313rem;
+	height: 10.313rem;
+	bottom: 0;
+}
+#contentForTest1{
+	width: 10.313rem;
+	height: 10.313rem;
+	background: yellow;
+	transition: transform 1s;
+	
+	position: relative;
+}
+#contentForTest1:hover{
+	transform: scale(4) translate(100px);
+	
+}
+#containerForTest1{
+	background: blue;
+	position: absolute;
+	bottom: 0;
+	transform-origin: left center;
+	width: 10.313rem;
+	height: 10.313rem;
+	transition: transform 6s;
+	transform-style: preserve-3d;
+}
+#containerForAllTest1:hover #containerForTest1 {
+	transform: rotateY(-180deg);
+}
+
+#test1 {
+	background: pink;
+	backface-visibility: hidden;
+	
+}
+#test_1_1{
+		transform: rotateY(180deg);
+	background: lightblue;
+	backface-visibility: hidden;
+}
+
+
+
+
+
+.Border {
+	border: 0.063rem solid black;
+}
+
+.Perspective {
+	perspective: 20rem;
+	
+}
+
+.Size {
+	width: 10.313rem;
+	height: 10.313rem;
+}
+
+.WindowOpening {
+	top: 3rem;
+}
+.WindowForCanvas {
+	left: 3rem;
+	transform: rotate(38deg);
+}
+.TranslateZ {
+	background: yellow;
+	transform: translateZ(-10rem);
+	transition: transform 1s;
+	
+	position: relative;
+}
+.TranslateZ:hover{
+	transform: scale(2) translate(100px, 20px);
+	z-index: 50;
+}
+div#door3 {
+	z-index: 1;
+}
+
+div#behindDoor2 {
+	z-index: 2;
+}
+
+div#door2 {
+	z-index: 3;
+}
+div#behindDoor1 {
+	z-index: 4;
+}
+div#door1 {
+	z-index: 5;
+}
+div#behindDoor0 {
+	z-index: 6;
+}
+div#door0 {
+	z-index: 7;
+}
+.WindowForSvg {
+	left: 17rem;
+}
+.Transition {
+	transition: transform 6s;
+	transform-style: preserve-3d;
+}
+.Window {
+	background: blue;
+	color: white;
+	float: left;
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+}
+.SlideX {
+	transform-origin: center bottom;
+}
+.Window figure, .Door figure {
+	margin: 0;
+	padding: 0.25rem;
+	position: absolute;
+	backface-visibility: hidden;
+	width: 9.813rem;
+	height: 9.813rem;
+}
+.Front {
+	background: blue;
+}
+.Back {
+	background: rgb(255, 0, 255);
+	transform: rotateY(180deg);
+}
+.WindowForSvg:hover .SlideX {
+	transform: translateY(-100%) rotateX(180deg);
+}
+
+.WindowForSvgAbsolute {
+	left: 29rem;
+}
+.WindowForSvgAbsolute:hover .RotateYFromPerspective {
+	transform: perspective(0.8rem) rotateX(-45deg);
+}
+.DoorOpening {
+	bottom: 0;
+}
+.Door {
+	background: blue;
+	position: absolute;
+	bottom: 0;
+	transform-origin: left center;
+}
+.DoorFront {
+	background: blue;
+}
+.DoorBack {
+	background: rgb(255, 0, 255);
+	transform: rotateY(180deg);
+}
+.DoorOpening:hover .Door {
+	transform: rotateY(-180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aside {
+	color: hsla(38, 84%, 53%, 1);
+	font-family: "Alte Haas Grotesk Bold";
+	font-size: 32px;
+	font-size: 2rem;
+	padding: 5px;
+	padding: .313rem;
+	margin: 0;
+}
+
+button {
+	background: #02529C;
+	border: 8px solid #DC1E35;
+	border: 0.5rem solid #DC1E35;
+	padding: 8px;
+	padding: .5rem;
+	width: 300px;
+	width: 18.75rem;
+	height: 200px;
+	height: 12.5rem;
+	cursor: pointer;
+}
+
+button#buttonForClosing {
+	color: hsla(0, 100%, 100%, 1);
+	font-family: "Alte Haas Grotesk Bold";
+	font-size: 24pt;
+	font-size: 2rem;
+	display: none;
+}
+
+code {
+	white-space: pre-wrap;
+}
+
+div#containerForCategories {
+	display: flex;
+	justify-content: space-around;
+}
+
+dl {
+	color: #02529C;
+	font-size: 24pt;
+	font-size: 2rem;
+}
+
+dt {
+	font-weight: bold;
+}
+
+figure {
+	margin: 16px 0 16px 0;
+	margin: 1rem 0 1rem 0;
+	text-align: center;
+}
+
+figcaption {
+	color: #02529C;
+	font-size: 24pt;
+	font-size: 2rem;
+}
+
+h1 {
+	color: #DC1E35;
+	font-family: "Alte Haas Grotesk Bold";
+	font-size: 64px;
+	font-size: 4rem;
+	text-shadow: 1px 1px 0px hsla(0, 0%, 0%, 1);
+	text-shadow: .063rem .063rem 0 hsla(0, 0%, 0%, 1);
+}
+
+h2 {
+	clear: both;
+	color: #ffff;
+	font-family: "Alte Haas Grotesk Bold";
+	font-size: 24pt;
+	font-size: 2rem;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+header#authors {
+	color: #DC1E35;
+	font-size: 32px;
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	position: absolute;
+	width: 600px;
+	width: 37.5rem;
+	height: 138px;
+	height: 8.625rem;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	margin: .625rem;
+	padding: 5px;
+	padding: .313rem;
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	row-gap: 32px;
+	row-gap: 2rem;
+	position: relative;
+}
+
+OL {
+	counter-reset: item
+}
+
+ol LI {
+	display: block
+}
+
+ol LI:before {
+	content: counters(item, ".") " ";
+	counter-increment: item
+}
+
+p, ol {
+	color: #02529C;
+	font-family: "Alte Haas Grotesk";
+	max-width: 30rem;
+	text-indent: 32px;
+	text-indent: 2rem;
+	text-shadow: 1px 1px 0px hsla(0, 0%, 0%, 1);
+	text-shadow: .063rem .063rem 0 hsla(0, 0%, 0%, 1);
+	margin-bottom: 0;
+	margin-top: 0;
+	max-width: 30rem;
+}
+
+pre {
+	tab-size: 4;
+	-moz-tab-size: 4;
+}
+
+div.MainBackground {
+	width: 100vw;
+	height: 100vh;
+	padding: 27px;
+	padding: 1.7rem;
+	background: hsl(155, 100%, 55%);
+	background-size: 88px 88px;
+	background-size: 5.5rem 5.5rem;
+	box-sizing: border-box;
+	display: flex;
+}
+
+div.MainContainer {
+	background-color: hsla(0, 100%, 1000%, 1);
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	overflow: auto;
+	width: 1366px;
+	height: 768px;
+	overflow: auto;
+}
+
+nav aside {
+	text-align: center;
+}
+
+nav#navigation {
+	background-color: hsla(220, 52%, 59%, 1);
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	flex-shrink: 0;
+	flex: 0 0 30%;
+	padding: 16px 0 16px 0;
+	padding: 1rem 0 1rem 0;
+	width: 100%;
+	padding: 16px 0 16px 0;
+}
+
+nav.Subnavigation {
+	padding: 0 16px 0 16px;
+	padding: 0 1rem 0 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav#images {
+	background-color: hsla(220, 52%, 59%, 1);
+}
+
+nav#logos {
+	background-color: hsla(0, 0%, 100%, 1);
+}
+
+.Sidebar {
+	float: left;
+	list-style: menu;
+	list-style-position: inside;
+	margin-top: 0;
+	width: 100%;
+	padding: 0;
+	z-index: 1;
+}
+
+.Content {
+	float: right;
+	margin-right: 10px;
+	margin-right: 0.625rem;
+	margin-left: 10px;
+	margin-left: 0.625rem;
+	padding: .313rem;
+	flex-shrink: 0;
+	position: relative;
+	width: 1336px;
+	width: 83.5rem;
+}
+
+footer {
+	display: flex;
+}
+
+footer p {
+	align-self: center;
+	color: hsla(38, 84%, 53%, 1);
+	font-family: "Alte Haas Grotesk Bold";
+	font-size: 12pt;
+	font-size: 1rem;
+	max-width: 839px;
+	max-width: 52rem;
+	text-align: center;
+	text-shadow: 1px 1px 0px hsla(0, 0%, 0%, 1);
+	text-shadow: .063rem .063rem 0 hsla(0, 0%, 0%, 1);
+	text-shadow: 1px 1px 0px hsla(0, 0%, 0%, 1);
+}
