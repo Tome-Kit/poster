@@ -202,6 +202,22 @@ class Poster {
 				})
 			]
 		}),
+		new Story({
+			'translations': [
+				new Translation({
+					'language': 'et',
+					'name': 'Hoovused'
+				})
+			]
+		}),
+		new Story({
+			'translations': [
+				new Translation({
+					'language': 'et',
+					'name': 'Kliima'
+				})
+			]
+		}),
 	];
 
 	/**
@@ -506,6 +522,16 @@ class Poster {
 		document.getElementById("buttonForGeologicalBuild").onclick = function(){
 			Poster.showArticle({
 				'name': 'geoloogiline-ehitus'
+			});
+		}
+		document.getElementById("buttonForClimate").onclick = function(){
+			Poster.showArticle({
+				'name': 'kliima'
+			});
+		}
+		document.getElementById("buttonForCurrents").onclick = function(){
+			Poster.showArticle({
+				'name': 'hoovused'
 			});
 		}
 		document.getElementById("buttonForClosing").onclick = function() {
