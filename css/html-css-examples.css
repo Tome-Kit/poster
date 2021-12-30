@@ -48,20 +48,24 @@ address {
 
 article {
 	background: hsla(0, 100%, 100%, 1);
-	border: 8px solid #DC1E35;
-	border: .5rem solid #DC1E35;
 	padding: 8px;
 	padding: .5rem;
-	width: 1302px;
-	width: 81.375rem;
-	height: 558px;
-	height: 34.875rem;
-	position: absolute;
-	top: 0;
+	width: 960px;
+	width: 60rem;
 	z-index: 1;
-	display: none;
 	flex-direction: row;
 	justify-content: space-evenly;
+	overflow: auto;
+}
+
+article:nth-child(even) {
+	border: 8px solid #DC1E35;
+	border: .5rem solid #DC1E35;
+}
+
+article:nth-child(odd) {
+	border: 8px solid hsl(155, 100%, 27%);
+	border: .5rem solid hsl(155, 100%, 27%);
 }
 
 article h2 {
@@ -312,16 +316,71 @@ aside {
 }
 
 button {
-	background: #02529C;
-	border: 8px solid #DC1E35;
-	border: 0.5rem solid #DC1E35;
+	background-color: transparent;
+	border: none;
 	padding: 8px;
 	padding: .5rem;
-	width: 300px;
-	width: 18.75rem;
-	height: 200px;
-	height: 12.5rem;
+	width: 64px;
+	width: 4rem;
+	height: 64;
+	height: 4rem;
 	cursor: pointer;
+}
+
+button#buttonForAnimals {
+	position: absolute;
+	left: 128px;
+	left: 8rem;
+	top: 512px;
+	top: 32rem;
+}
+
+button#buttonForClimate {
+	position: absolute;
+	left: 64px;
+	left: 4rem;
+	top: 256px;
+	top: 16rem;
+}
+
+button#buttonForGeologicalBuild {
+	position: absolute;
+	left: 128px;
+	left: 8rem;
+	top: 256px;
+	top: 16rem;
+}
+
+button#buttonForHumanActivities {
+	position: absolute;
+	left: 256px;
+	left: 16rem;
+	top: 512px;
+	top: 32rem;
+}
+
+button#buttonForPlants {
+	position: absolute;
+	left: 256px;
+	left: 16rem;
+	top: 256px;
+	top: 16rem;
+}
+
+button#buttonForWhat {
+	position: absolute;
+	left: 624px;
+	left: 39rem;
+	top: 320px;
+	top: 20rem;
+}
+
+button#buttonForWhere {
+	position: absolute;
+	left: 64px;
+	left: 4rem;
+	top: 512px;
+	top: 32rem;
 }
 
 button#buttonForClosing {
@@ -330,6 +389,11 @@ button#buttonForClosing {
 	font-size: 24pt;
 	font-size: 2rem;
 	display: none;
+}
+
+button h2 {
+	font-size: 48pt;
+	font-size: 4rem;
 }
 
 code {
@@ -350,10 +414,12 @@ dl {
 dt {
 	font-weight: bold;
 }
-
+dd {
+	text-shadow: 1px 1px 0 hsl(0deg 0% 0%);
+	text-shadow: 0.063rem 0.063rem 0 hsl(0deg 0% 0%);
+}
 figure {
-	margin: 16px 0 16px 0;
-	margin: 1rem 0 1rem 0;
+	float: right;
 	text-align: center;
 }
 
@@ -364,12 +430,14 @@ figcaption {
 }
 
 h1 {
-	color: #DC1E35;
+	color: #ffffff;
 	font-family: "Alte Haas Grotesk Bold";
-	font-size: 64px;
-	font-size: 4rem;
-	text-shadow: 1px 1px 0px hsla(0, 0%, 0%, 1);
-	text-shadow: .063rem .063rem 0 hsla(0, 0%, 0%, 1);
+	font-size: 48px;
+	font-size: 3rem;
+	text-shadow: 1px 1px 0px hsla(353, 76%, 49%, 1);
+	text-shadow: .063rem .063rem 0 hsla(353, 76%, 49%, 1);
+	margin: 8px;
+	margin: .5rem;
 }
 
 h2 {
@@ -383,38 +451,46 @@ h2 {
 }
 
 header#authors {
-	color: #DC1E35;
+	color: #ffffff;
 	font-size: 32px;
 	font-size: 2rem;
+	line-height: 0rem;
+	text-shadow: 1px 1px 0px hsla(353, 76%, 49%, 1);
+	text-shadow: .063rem .063rem 0 hsla(353, 76%, 49%, 1);
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	position: absolute;
-	width: 600px;
-	width: 37.5rem;
+	width: 272px;
+	width: 17rem;
 	height: 138px;
 	height: 8.625rem;
 	top: 0;
 	right: 0;
-	margin: 10px;
-	margin: .625rem;
 	padding: 5px;
 	padding: .313rem;
+}
+iframe#youtubeRide {
+	width: 640px;
+	height: 443px;
 }
 img {
 	max-width: 100%;
 	display: block;
+	margin: 0 auto;
 }
 
 main {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	row-gap: 32px;
-	row-gap: 2rem;
-	position: relative;
+	flex-direction: column;
+	row-gap: 16px;
+	row-gap: 1rem;
+}
+
+object#svgIceland {
+	width: 992px;
+	width: 62rem;
 }
 
 OL {
@@ -450,10 +526,9 @@ pre {
 
 div.MainBackground {
 	width: 100vw;
-	height: 100vh;
-	padding: 27px;
-	padding: 1.7rem;
-	background: hsl(155, 100%, 55%);
+	padding: 16px;
+	padding: 1rem;
+	background-color: hsl(155, 100%, 27%);
 	background-size: 88px 88px;
 	background-size: 5.5rem 5.5rem;
 	box-sizing: border-box;
@@ -461,14 +536,13 @@ div.MainBackground {
 }
 
 div.MainContainer {
-	background-color: hsla(0, 100%, 1000%, 1);
+	background-color: #02529C;
+	background-size: 1024px 768px;
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
-	overflow: auto;
-	width: 1366px;
-	height: 768px;
-	overflow: auto;
+	width: 1024px;
+	width: 64rem;
 }
 
 nav aside {
@@ -495,7 +569,6 @@ nav.Subnavigation {
 	flex-direction: column;
 	align-items: center;
 }
-
 nav#images {
 	background-color: hsla(220, 52%, 59%, 1);
 }
@@ -516,15 +589,28 @@ nav#logos {
 
 .Content {
 	float: right;
-	margin-right: 10px;
-	margin-right: 0.625rem;
-	margin-left: 10px;
-	margin-left: 0.625rem;
-	padding: .313rem;
+	padding: 16px;
+	padding: 1rem;
 	flex-shrink: 0;
 	position: relative;
-	width: 1336px;
-	width: 83.5rem;
+	width: 992px;
+	width: 62rem;
+}
+section {
+  box-sizing: border-box;
+  width: 100%;
+}
+span.ToTheTop {
+	cursor: pointer;
+	font-size: 24pt;
+	font-size: 2rem;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px hsla(0, 0%, 0%, 1);
+	text-shadow: .063rem .063rem 0 hsla(0, 0%, 0%, 1);
+	position: absolute;
+	left: -8px;
+	left: -.5rem;
 }
 
 footer {

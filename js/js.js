@@ -219,7 +219,7 @@ class Poster {
 			]
 		}),
 	];
-
+	
 	/**
 	 * This function checks whether all the files are downloaded and if they are,
 	 * the contents will be set.
@@ -360,8 +360,8 @@ class Poster {
 	 */
 	static load(parameters) {
 		Poster.currentFiles = parameters.files;
-		if(parameters.hasOwnProperty("title")) {
-			
+		if (parameters.hasOwnProperty("title")) {
+
 			Poster.currentFiles.html = [];
 			Poster.currentFiles.html.push({
 				file: parameters.name + ".html",
@@ -506,38 +506,93 @@ class Poster {
 			},
 			'callback': Poster.displayArticle
 		});
-		
+
 	}
-	static bindButtons(){
-		document.getElementById("buttonForWhat").onclick = function(){
-			Poster.showArticle({
-				'name': 'mis-on-kverkfjallaleið'
-			});
+	static bindButtons() {
+		document.getElementById("svgIceland").onload = function() {
+
+			const pathsToTargets = [
+				{
+					index: 0,
+					idTarget: "what"
+				},
+				{
+					index: 1,
+					idTarget: "where"
+				},
+				{
+					index: 2,
+					idTarget: "geology"
+				},
+				{
+					index: 3,
+					idTarget: "plants"
+				},
+				{
+					index: 4,
+					idTarget: "animals"
+				},
+				{
+					index: 5,
+					idTarget: "humanActivities"
+				},
+				{
+					index: 6,
+					idTarget: "climate"
+				},
+				{
+					index: 7,
+					idTarget: "currents"
+				}
+			];
+			
+			let paths = document.getElementById("svgIceland").contentDocument.getElementsByTagName("g")[0].getElementsByTagName("path");
+			for (let indexOfPath = 0; indexOfPath < paths.length; indexOfPath++) {
+				paths[indexOfPath].onclick = function() {
+					document.getElementById(pathsToTargets[indexOfPath].idTarget).scrollIntoView({
+						behavior: "smooth"
+					});
+				}
+				let style = paths[indexOfPath].getAttribute("style");
+				paths[indexOfPath].setAttribute("style", style + " cursor: pointer;");
+			}
 		}
-		document.getElementById("buttonForWhere").onclick = function(){
-			Poster.showArticle({
-				'name': 'kus-on-kverkfjallaleið'
-			});
+		for (const hand of document.getElementsByClassName("ToTheTop")) {
+			hand.onclick = function() {
+				document.body.scrollIntoView({
+					behavior: "smooth"
+				});
+			};
 		}
-		document.getElementById("buttonForGeologicalBuild").onclick = function(){
-			Poster.showArticle({
-				'name': 'geoloogiline-ehitus'
-			});
-		}
-		document.getElementById("buttonForClimate").onclick = function(){
-			Poster.showArticle({
-				'name': 'kliima'
-			});
-		}
-		document.getElementById("buttonForCurrents").onclick = function(){
-			Poster.showArticle({
-				'name': 'hoovused'
-			});
-		}
-		document.getElementById("buttonForClosing").onclick = function() {
-			document.getElementById("buttonForClosing").style.display = 'none';
-			document.getElementsByTagName("article")[0].style.display = 'none';
-		}
+		//		document.getElementById("buttonForWhat").onclick = function(){
+		//			Poster.showArticle({
+		//				'name': 'mis-on-kverkfjallaleið'
+		//			});
+		//		}
+		//		document.getElementById("buttonForWhere").onclick = function(){
+		//			Poster.showArticle({
+		//				'name': 'kus-on-kverkfjallaleið'
+		//			});
+		//		}
+		//		document.getElementById("buttonForGeologicalBuild").onclick = function() {
+		//			Poster.showArticle({
+		//				'name': 'geoloogiline-ehitus'
+		//			});
+		//		}
+		//		document.getElementById("buttonForClimate").onclick = function(){
+		//			Poster.showArticle({
+		//				'name': 'kliima'
+		//			});
+		//		}
+		//		document.getElementById("buttonForCurrents").onclick = function(){
+		//			Poster.showArticle({
+		//				'name': 'hoovused'
+		//			});
+		//		}
+		//		document.getElementById("buttonForClosing").onclick = function() {
+		//			document.getElementById("buttonForClosing").style.display = 'none';
+		//			document.getElementsByTagName("article")[0].style.display = 'none';
+		//		}
 	}
 	static displayArticle() {
 		document.getElementsByTagName("article")[0].style.display = 'flex';
