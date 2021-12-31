@@ -58,12 +58,12 @@ article {
 	overflow: auto;
 }
 
-article:nth-child(even) {
+section:nth-child(odd) article {
 	border: 8px solid #DC1E35;
 	border: .5rem solid #DC1E35;
 }
 
-article:nth-child(odd) {
+section:nth-child(even) article {
 	border: 8px solid hsl(155, 100%, 27%);
 	border: .5rem solid hsl(155, 100%, 27%);
 }
@@ -72,20 +72,15 @@ article h2 {
 	color: #DC1E35;
 }
 
-
-
-
-
-
-
-#containerForAllTest{
+#containerForAllTest {
 	border: 0.063rem solid black;
 	perspective: 20rem;
 	width: 10.313rem;
 	height: 10.313rem;
 	bottom: 0;
 }
-#contentForTest{
+
+#contentForTest {
 	width: 10.313rem;
 	height: 10.313rem;
 	background: orange;
@@ -93,11 +88,12 @@ article h2 {
 	z-index: 1000;
 	position: relative;
 }
-#contentForTest:hover{
+
+#contentForTest:hover {
 	transform: scale(4) translate(100px);
-	
 }
-#containerForTest{
+
+#containerForTest {
 	background: blue;
 	position: absolute;
 	bottom: 0;
@@ -107,6 +103,7 @@ article h2 {
 	transition: transform 6s;
 	transform-style: preserve-3d;
 }
+
 #containerForAllTest:hover #containerForTest {
 	transform: rotateY(-180deg);
 }
@@ -114,34 +111,35 @@ article h2 {
 #test {
 	background: pink;
 	backface-visibility: hidden;
-	
 }
-#test_1{
-		transform: rotateY(180deg);
+
+#test_1 {
+	transform: rotateY(180deg);
 	background: lightblue;
 	backface-visibility: hidden;
 }
 
-#containerForAllTest1{
+#containerForAllTest1 {
 	border: 0.063rem solid black;
 	perspective: 20rem;
 	width: 10.313rem;
 	height: 10.313rem;
 	bottom: 0;
 }
-#contentForTest1{
+
+#contentForTest1 {
 	width: 10.313rem;
 	height: 10.313rem;
 	background: yellow;
 	transition: transform 1s;
-	
 	position: relative;
 }
-#contentForTest1:hover{
+
+#contentForTest1:hover {
 	transform: scale(4) translate(100px);
-	
 }
-#containerForTest1{
+
+#containerForTest1 {
 	background: blue;
 	position: absolute;
 	bottom: 0;
@@ -151,6 +149,7 @@ article h2 {
 	transition: transform 6s;
 	transform-style: preserve-3d;
 }
+
 #containerForAllTest1:hover #containerForTest1 {
 	transform: rotateY(-180deg);
 }
@@ -158,17 +157,13 @@ article h2 {
 #test1 {
 	background: pink;
 	backface-visibility: hidden;
-	
 }
-#test_1_1{
-		transform: rotateY(180deg);
+
+#test_1_1 {
+	transform: rotateY(180deg);
 	background: lightblue;
 	backface-visibility: hidden;
 }
-
-
-
-
 
 .Border {
 	border: 0.063rem solid black;
@@ -176,7 +171,6 @@ article h2 {
 
 .Perspective {
 	perspective: 20rem;
-	
 }
 
 .Size {
@@ -187,21 +181,24 @@ article h2 {
 .WindowOpening {
 	top: 3rem;
 }
+
 .WindowForCanvas {
 	left: 3rem;
 	transform: rotate(38deg);
 }
+
 .TranslateZ {
 	background: yellow;
 	transform: translateZ(-10rem);
 	transition: transform 1s;
-	
 	position: relative;
 }
-.TranslateZ:hover{
+
+.TranslateZ:hover {
 	transform: scale(2) translate(100px, 20px);
 	z-index: 50;
 }
+
 div#door3 {
 	z-index: 1;
 }
@@ -213,25 +210,32 @@ div#behindDoor2 {
 div#door2 {
 	z-index: 3;
 }
+
 div#behindDoor1 {
 	z-index: 4;
 }
+
 div#door1 {
 	z-index: 5;
 }
+
 div#behindDoor0 {
 	z-index: 6;
 }
+
 div#door0 {
 	z-index: 7;
 }
+
 .WindowForSvg {
 	left: 17rem;
 }
+
 .Transition {
 	transition: transform 6s;
 	transform-style: preserve-3d;
 }
+
 .Window {
 	background: blue;
 	color: white;
@@ -240,9 +244,11 @@ div#door0 {
 	position: absolute;
 	top: 0;
 }
+
 .SlideX {
 	transform-origin: center bottom;
 }
+
 .Window figure, .Door figure {
 	margin: 0;
 	padding: 0.25rem;
@@ -251,13 +257,16 @@ div#door0 {
 	width: 9.813rem;
 	height: 9.813rem;
 }
+
 .Front {
 	background: blue;
 }
+
 .Back {
 	background: rgb(255, 0, 255);
 	transform: rotateY(180deg);
 }
+
 .WindowForSvg:hover .SlideX {
 	transform: translateY(-100%) rotateX(180deg);
 }
@@ -265,45 +274,34 @@ div#door0 {
 .WindowForSvgAbsolute {
 	left: 29rem;
 }
+
 .WindowForSvgAbsolute:hover .RotateYFromPerspective {
 	transform: perspective(0.8rem) rotateX(-45deg);
 }
+
 .DoorOpening {
 	bottom: 0;
 }
+
 .Door {
 	background: blue;
 	position: absolute;
 	bottom: 0;
 	transform-origin: left center;
 }
+
 .DoorFront {
 	background: blue;
 }
+
 .DoorBack {
 	background: rgb(255, 0, 255);
 	transform: rotateY(180deg);
 }
+
 .DoorOpening:hover .Door {
 	transform: rotateY(-180deg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 aside {
 	color: hsla(38, 84%, 53%, 1);
@@ -414,13 +412,14 @@ dl {
 dt {
 	font-weight: bold;
 }
-dd {
-	text-shadow: 1px 1px 0 hsl(0deg 0% 0%);
-	text-shadow: 0.063rem 0.063rem 0 hsl(0deg 0% 0%);
-}
+
 figure {
 	float: right;
 	text-align: center;
+}
+
+figure.FigureCenter {
+	float: none;
 }
 
 figcaption {
@@ -438,6 +437,7 @@ h1 {
 	text-shadow: .063rem .063rem 0 hsla(353, 76%, 49%, 1);
 	margin: 8px;
 	margin: .5rem;
+	position: absolute;
 }
 
 h2 {
@@ -464,17 +464,19 @@ header#authors {
 	position: absolute;
 	width: 272px;
 	width: 17rem;
-	height: 138px;
-	height: 8.625rem;
+	height: 112px;
+	height: 7rem;
 	top: 0;
 	right: 0;
 	padding: 5px;
 	padding: .313rem;
 }
+
 iframe#youtubeRide {
 	width: 640px;
 	height: 443px;
 }
+
 img {
 	max-width: 100%;
 	display: block;
@@ -491,6 +493,22 @@ main {
 object#svgIceland {
 	width: 992px;
 	width: 62rem;
+	margin-top: 32px;
+	margin-top: 2rem;
+}
+
+object#ridgesPlates {
+	width: 864px;
+	width: 54rem;
+	height: 483px;
+	height: 30.1875rem;
+}
+
+object#volcanics {
+	width: 726px;
+	width: 45.375rem;
+	height: 589px;
+	height: 36.8135rem;
 }
 
 OL {
@@ -512,8 +530,6 @@ p, ol {
 	max-width: 30rem;
 	text-indent: 32px;
 	text-indent: 2rem;
-	text-shadow: 1px 1px 0px hsla(0, 0%, 0%, 1);
-	text-shadow: .063rem .063rem 0 hsla(0, 0%, 0%, 1);
 	margin-bottom: 0;
 	margin-top: 0;
 	max-width: 30rem;
@@ -525,9 +541,6 @@ pre {
 }
 
 div.MainBackground {
-	width: 100vw;
-	padding: 16px;
-	padding: 1rem;
 	background-color: hsl(155, 100%, 27%);
 	background-size: 88px 88px;
 	background-size: 5.5rem 5.5rem;
@@ -569,6 +582,7 @@ nav.Subnavigation {
 	flex-direction: column;
 	align-items: center;
 }
+
 nav#images {
 	background-color: hsla(220, 52%, 59%, 1);
 }
@@ -596,9 +610,17 @@ nav#logos {
 	width: 992px;
 	width: 62rem;
 }
+
 section {
-  box-sizing: border-box;
-  width: 100%;
+	box-sizing: border-box;
+	width: 100%;
+	padding-top: 16px;
+	padding-top: 1rem;
+}
+
+section#where figure {
+	width: 480px;
+	width: 30rem;
 }
 span.ToTheTop {
 	cursor: pointer;
