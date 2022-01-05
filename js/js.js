@@ -547,6 +547,10 @@ class Poster {
 				{
 					index: 8,
 					idTarget: "soil"
+				},
+				{
+					index: 9,
+					idTarget: "sources"
 				}
 			];
 			

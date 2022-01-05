@@ -418,10 +418,26 @@ figure {
 	text-align: center;
 }
 
+figure#figureForMap {
+	width: 480px;
+	width: 30rem;
+}
+
+figure#figureForSwimming {
+	float: left;
+	width: 308px;
+	width: 19.25rem;
+}
+
 figure.FigureCenter {
 	float: none;
 }
 
+figure.FigureRight {
+	float: right;
+	width: 275px;
+	width: 17.1875rem;
+}
 figcaption {
 	color: #02529C;
 	font-size: 24pt;
@@ -486,8 +502,6 @@ img {
 main {
 	display: flex;
 	flex-direction: column;
-	row-gap: 16px;
-	row-gap: 1rem;
 }
 
 object#svgIceland {
@@ -618,9 +632,11 @@ section {
 	padding-top: 1rem;
 }
 
-section#where figure {
-	width: 480px;
-	width: 30rem;
+section#sources p {
+	padding-left: 32px;
+	padding-left: 2rem;
+	text-indent: -32px;
+	text-indent: -2rem;
 }
 span.ToTheTop {
 	cursor: pointer;
